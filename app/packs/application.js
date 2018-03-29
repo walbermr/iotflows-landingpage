@@ -6,6 +6,6 @@
 //
 // To reference this file, add <%= javascript_pack_tag 'application' %> to the appropriate
 // layout file, like app/views/layouts/application.html.erb
-import "./application.css";
-
-document.body.insertAdjacentHTML("afterbegin", "testando");
+import "init";
+import "assets/components/page/page";
+import "assets/components/auth-form/auth-form";

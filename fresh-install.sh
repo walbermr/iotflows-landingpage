@@ -4,7 +4,7 @@ echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/source
 sudo apt-get update
 sudo apt-get install -y nodejs ruby ruby-dev make zlib1g-dev libicu-dev libpq-dev build-essential git cmake yarn golang
 
-sudo gem install pg
+bundle install --with=GROUP[development]
 
 mkdir ~/.go
 echo "GOPATH=$HOME/.go" >> ~/.bashrc
@@ -13,6 +13,6 @@ echo "PATH=\$PATH:\$GOPATH/bin # Add GOPATH/bin to PATH for scripting" >> ~/.bas
 source ~/.bashrc
 go get -u -f github.com/DarthSim/overmind
 
-npm install
+yarn
 
 echo "Environment is ready to go..."
