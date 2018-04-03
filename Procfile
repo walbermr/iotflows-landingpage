@@ -1,2 +1,2 @@
-server: bin/rails server
+web: bin/rails server
 assets: guard

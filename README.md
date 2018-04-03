@@ -1,18 +1,13 @@
 # README
 
-You can use $ fresh-install.sh if using a fresh system install.
+This README would normally document whatever steps are necessary to get the
+application up and running.
+
+Things you may want to cover:
 
 * Ruby version
 
-        ruby 2.3.1
-
 * System dependencies
-
-        packages: nodejs ruby ruby-dev make zlib1g-dev libicu-dev libpq-dev build-essential git cmake yarn tmux go
-        go packages: overmind
-        gems: pg
-
-        Overmind is usefull to execute procfile.
 
 * Configuration
 

@@ -1,3 +1,3 @@
-class HomeController < ApplicationController
-  def home;  end
+class HomeController < ActionController::Base
+  def home; end
 end
