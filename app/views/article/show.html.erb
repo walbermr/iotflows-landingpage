@@ -7,3 +7,9 @@
   <strong>Text:</strong>
   <%= @article.text %>
 </p>
+
+<p>
+  <%= button_to 'Home', '/', method: :get %>
+  <%= button_to 'Back', wiki_path, method: :get%>
+  <%= button_to 'Edit', edit_article_path(@article), method: :get %>
+</p>
