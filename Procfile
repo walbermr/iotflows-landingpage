@@ -1,1 +1,2 @@
-web: bin/rails server -e production -p 8080
+web: bin/rails server -e development
+assets: guard

@@ -6,12 +6,16 @@ sudo apt-get install -y nodejs ruby ruby-dev make zlib1g-dev libicu-dev libpq-de
 
 bundle install --with=GROUP[development]
 
-mkdir ~/.go
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 go get -u -f github.com/DarthSim/overmind
 
 yarn
+
+echo "Configure postgresql user password using \password pguser"
+
+sudo -u postgres createuser -s pguser
+sudo -u postgres psql
 
 rails db:create
 rails db:migrate

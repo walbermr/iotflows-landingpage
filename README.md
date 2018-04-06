@@ -24,6 +24,10 @@ You can use $ fresh-install.sh if using a fresh system install.
 * Services (job queues, cache servers, search engines, etc.)
 
 * Deployment instructions
+        
+Clone the repo, run fresh-install.sh, configure postgresql user and run 
+        
+        $ nohup sudo rails server -b 0.0.0.0 -p 80 &
 
 ## DB operations
 
