@@ -26,14 +26,17 @@
   <a href="#" class="w3-bar-item w3-button w3-teal"><i class="fa fa-home w3-margin-right"></i>Logo</a>
   <a href="#team" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Team</a>
   <a href="#work" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Work</a>
-  <a href="\wiki" class="w3-bar-item w3-button w3-hide-small w3-gover-white">Wiki</a>
-    <div class="w3-dropdown-hover w3-hide-small">
+  <%= link_to 'Wiki', wiki_path,
+      class: "w3-bar-item w3-button w3-hide-small w3-gover-white"%>
+  <%= link_to 'Member Login', new_user_session_path, 
+      class:'w3-bar-item w3-button w3-hide-small w3-gover-white' %>
+    <!--<div class="w3-dropdown-hover w3-hide-small">
     <button class="w3-button" title="Notifications">Dropdown <i class="fa fa-caret-down"></i></button>     
     <div class="w3-dropdown-content w3-card-4 w3-bar-block">
       <a href="#" class="w3-bar-item w3-button">Link</a>
       <a href="#" class="w3-bar-item w3-button">Link</a>
       <a href="#" class="w3-bar-item w3-button">Link</a>
-    </div>
+    </div>-->
   </div>
   <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-teal" title="Search"><i class="fa fa-search"></i></a>
  </div>
