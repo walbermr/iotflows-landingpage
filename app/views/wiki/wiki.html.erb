@@ -13,12 +13,14 @@
       <td><%= article.title %></td>
       <td><%= button_to 'Show', article_path(article),
               method: :get %></td>
-      <td><%= button_to 'Edit', edit_article_path(article),
-              method: :get %></td>
-      <td><%= button_to 'Delete', article_path(article),
-              method: :delete,
-              data: { confirm: 'Do you really want to delete this article?' }
-          %>
+      <% if user_signed_in? %>
+        <td><%= button_to 'Edit', edit_article_path(article),
+                method: :get %></td>
+        <td><%= button_to 'Delete', article_path(article),
+                method: :delete,
+                data: { confirm: 'Do you really want to delete this article?' }
+            %>
+      <% end %>
       </td>
     </tr>
   <% end %>
@@ -26,6 +28,8 @@
 </div>
 
 <div class='footer'>
-  <%= button_to 'New Article', new_article_path, method: :get%>
+  <% if user_signed_in? %>
+    <%= button_to 'New Article', new_article_path, method: :get%>  
+  <% end %>
   <%= button_to 'Home', root_path, method: :get %>
 </div>

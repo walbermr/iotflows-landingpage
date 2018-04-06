@@ -1,5 +1,6 @@
 # README
 
+## Getting started
 You can use $ fresh-install.sh if using a fresh system install.
 
 * Ruby version
@@ -9,7 +10,6 @@ You can use $ fresh-install.sh if using a fresh system install.
 * System dependencies
 
         packages: nodejs ruby ruby-dev make zlib1g-dev libicu-dev libpq-dev build-essential git cmake yarn tmux go postgresql postgresql-contrib libpq-dev
-        go packages: overmind
 
         Overmind is usefull to execute procfile.
 
@@ -25,4 +25,15 @@ You can use $ fresh-install.sh if using a fresh system install.
 
 * Deployment instructions
 
-* ...
+## DB operations
+
+To operate directly on db using rails console use this guide:
+
+* New user: User.create!(email:'email@example.com',  password:'password', username:'username')
+
+* Search db entry: Class.where(attribute: value)
+
+* Search all db entry: Class.all
+
+* Delete db entry: Class.where(attribute: value).destroy_all
+ 
