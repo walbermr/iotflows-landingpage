@@ -1,11 +1,13 @@
-<%= stylesheet_link_tag "wiki" %>
+<%= stylesheet_link_tag    "application", :media => "all" %>
+<%= render 'shared/header' %>
+
 <h1>Wiki</h1>
-<h2>Listing articles</h2>
+<h4>Listing articles</h4>
 
 <div class='article_list'>
 <table>
   <tr>
-    <th>Title</th>
+    <th><h5>Title</h5></th>
   </tr>
  
   <% @articles.each do |article| %>
@@ -33,3 +35,5 @@
   <% end %>
   <%= button_to 'Home', root_path, method: :get %>
 </div>
+
+<%= render 'shared/footer' %>
