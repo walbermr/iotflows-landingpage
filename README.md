@@ -33,11 +33,23 @@ Clone the repo, run fresh-install.sh, configure postgresql user and run
 
 To operate directly on db using rails console use this guide:
 
-* New user: User.create!(email:'email@example.com',  password:'password', username:'username')
+* New user:
 
-* Search db entry: Class.where(attribute: value)
+        User.create!(email:'email@example.com',  password:'password', username:'username')
 
-* Search all db entry: Class.all
+* Search db entry:
 
-* Delete db entry: Class.where(attribute: value).destroy_all
+        Class.where(attribute: value)
+
+* Search all db entry:
+
+        Class.all
+
+* Delete db entry:
+
+        Class.where(attribute: value).destroy_all
+
+To reset database to newer models use: **(ONLY USE IF DB IS EMPTY, THIS WILL DELETE THE DB COMPLETELY AND RUN THE SEED FILE)**
+
+        $ reset-db.sh
  
