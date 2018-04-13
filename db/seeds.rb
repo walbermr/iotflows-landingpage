@@ -11,3 +11,5 @@ User.create!(email:'irbp@cin.ufpe.br',  password:'irbp123', username:'irbp',
  occupation:'UROP Computer Engineering',  name:'Ítalo Rodrigo Barbosa Paulino')
 User.create!(email:'abl3@cin.ufpe.br',  password:'lapprand123', username:'lapprand',
  occupation:'UROP Computer Science',  name:'Arthur Barros Lapprand')
+User.create!(email:'fms6@cin.ufpe.br',  password:'filipems123', username:'filipems',
+ occupation:'UROP Computer Engineering',  name:'Filipe de Melo Silva')
