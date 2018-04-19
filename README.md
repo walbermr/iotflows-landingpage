@@ -50,6 +50,7 @@ Note that if you do it on your local repo, running the server as development wil
 
 To run the server application do:
 
+        $ rake assets:precompile db:migrate RAILS_ENV=production
         $ sudo rails server -b 0.0.0.0 -p 80 -e production
 
 ## DB operations
