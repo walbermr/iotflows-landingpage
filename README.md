@@ -11,7 +11,7 @@ You can use $ fresh-install.sh if using a fresh system install.
 
         packages: nodejs ruby ruby-dev make zlib1g-dev libicu-dev libpq-dev build-essential git cmake yarn tmux go postgresql postgresql-contrib libpq-dev
 
-        Overmind is usefull to execute procfile.
+Note: Overmind is usefull to execute procfile.
 
 * Configuration
 
@@ -25,19 +25,55 @@ You can use $ fresh-install.sh if using a fresh system install.
 
 * Deployment instructions
         
-Clone the repo, run fresh-install.sh, configure postgresql user and run 
-        
-        $ nohup sudo rails server -b 0.0.0.0 -p 80 &
+Clone the repo, run fresh-install.sh. And create the user and databse on postgresql using:
+
+        $ sudo -u postgres psql
+        $ CREATE USER iotflows_landingpage WITH PASSWORD 'YOUR_USER_PASSWORD';
+        $ CREATE DATABASE iotflows_landingpage_production;
+
+Then use \q to exit the postgresql cli.
+
+Modify your /etc/environment using sudo and add to the end of the file these lines:
+
+        export SECRET_KEY_BASE=<rake secret>
+        ruby -e 'p ENV["SECRET_KEY_BASE"]'
+        export IOTFLOWS_LANDINGPAGE_DATABASE_PASSWORD=YOUR_USER_PASSWORD
+
+To install all production dependencies do:
+
+        $ bundle install --deployment --without development test
+
+Note that if you do it on your local repo, running the server as development will no longer works, then you must run:
+
+        $ bundle config --delete without
+        $ bundle install
+
+To run the server application do:
+
+        $ rake assets:precompile db:migrate RAILS_ENV=production
+        $ sudo rails server -b 0.0.0.0 -p 80 -e production
 
 ## DB operations
 
 To operate directly on db using rails console use this guide:
 
-* New user: User.create!(email:'email@example.com',  password:'password', username:'username')
+* New user:
 
-* Search db entry: Class.where(attribute: value)
+        User.create!(email:'email@example.com',  password:'password', username:'username')
 
-* Search all db entry: Class.all
+* Search db entry:
 
-* Delete db entry: Class.where(attribute: value).destroy_all
- 
+        Class.where(attribute: value)
+
+* Search all db entry:
+
+        Class.all
+
+* Delete db entry:
+
+        Class.where(attribute: value).destroy_all
+
+To reset database to newer models use: **(ONLY USE IF DB IS EMPTY, THIS WILL DELETE THE DB COMPLETELY AND RUN THE SEED FILE)**
+
+        $ reset-db.sh
+        

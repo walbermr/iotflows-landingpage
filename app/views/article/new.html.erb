@@ -24,11 +24,13 @@
       <%= form.text_area :text %>
     </p>
   
-    <p>
+    <p class='row'>
       <%= form.submit %>
-      <%= button_to 'Back', wiki_path %>
     </p>
+      
   <% end %>
+  <%= button_to 'Back', wiki_path, method: :get %>
+    
 <% else %>
   <div>
     <p>Sorry, only project members can create new articles.</p>

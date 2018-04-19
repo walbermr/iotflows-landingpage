@@ -84,6 +84,6 @@ test:
 #
 production:
   <<: *default
-  database: iotflows-landingpage_production
-  username: iotflows-landingpage
-  password: <%= ENV['IOTFLOWS-LANDINGPAGE_DATABASE_PASSWORD'] %>
+  database: iotflows_landingpage_production
+  username: iotflows_landingpage
+  password: <%= ENV['IOTFLOWS_LANDINGPAGE_DATABASE_PASSWORD'] %>
