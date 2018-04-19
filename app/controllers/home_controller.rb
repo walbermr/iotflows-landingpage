@@ -1,6 +1,6 @@
 class HomeController < ActionController::Base
   def home;
-    @doctors = filter_users_by_regex(/D+/)  
+    @doctors = filter_users_by_regex(/PhD+/)  
     @masters = filter_users_by_regex(/M+/)
     @bachelors = filter_users_by_regex(/U+/)
   end
