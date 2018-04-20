@@ -30,7 +30,7 @@ group :development, :test do
   gem 'selenium-webdriver'
 end
 
-group :development do
+group :development do 
   gem 'web-console', '>= 3.3.0'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'

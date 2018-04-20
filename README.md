@@ -35,9 +35,8 @@ Then use \q to exit the postgresql cli.
 
 Modify your /etc/environment using sudo and add to the end of the file these lines:
 
-        export SECRET_KEY_BASE=<rake secret>
-        ruby -e 'p ENV["SECRET_KEY_BASE"]'
-        export IOTFLOWS_LANDINGPAGE_DATABASE_PASSWORD=YOUR_USER_PASSWORD
+        SECRET_KEY_BASE=YOUR_SECRET
+        IOTFLOWS_LANDINGPAGE_DATABASE_PASSWORD=YOUR_USER_PASSWORD
 
 To install all production dependencies do:
 
@@ -48,10 +47,20 @@ Note that if you do it on your local repo, running the server as development wil
         $ bundle config --delete without
         $ bundle install
 
+If you are getting "PG::ConnectionBad: fe_sendauth: no password supplied". It's important to check if ./config/database.yml, in production it should look like this (without '-'):
+
+        database: iotflows_landingpage_production
+        username: iotflows_landingpage
+        password: <%= ENV['IOTFLOWS_LANDINGPAGE_DATABASE_PASSWORD'] %>
+
 To run the server application do:
 
-        $ rake assets:precompile db:migrate RAILS_ENV=production
-        $ sudo rails server -b 0.0.0.0 -p 80 -e production
+        $ rails assets:precompile db:migrate RAILS_ENV=production
+        $ sudo rails server -b 0.0.0.0 -p 80 -e production -d
+
+To kill the server application do:
+
+        $ sudo kill -9 $(cat tmp/pids/server.pid)
 
 ## DB operations
 
