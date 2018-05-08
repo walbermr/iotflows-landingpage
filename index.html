@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html>
+  <meta charset="UTF-8"> 
+  <head>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  </head>
+
+  <body>
+    <!--JavaScript at end of body for optimized loading-->
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+
+    <nav class='light-blue ligthen-1'>
+      <div class="nav-wrapper container">
+        <a class='brand-logo site-logo'>IoT-Flows</a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="#summary">Summary</a></li>
+            <li><a href="#team">Team</a></li>
+            <li><a href="#partners">Partners</a></li>
+            <li><a href='/mediawiki/'>Wiki</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <h2 class='center-align row section'><a name="summary"></a>Project Summary</h2>
+    <div class='divider'></div>
+
+    <div class="row">
+      <div class="container">
+        <div class="col s12 m6">
+          <p>This is a two-year collaboration project financed by the <a href="https://www.nsf.gov/">NSF</a> and <a href="https://www.rnp.br/">RNP</a>, involving the University of Illinois at Urbana-Champaign (USA), University of Michigan (USA) and Universidade Federal de Pernambuco (Brazil)</p>
+          <p>The goal of our project is to develop techniques and a system that enable a cross-layer analysis across the IoT app layer, network layer, and, when feasible, at device end-points. We will specifically focus on extracting flow policies from IoT apps and enforcing them or detecting their violations at lower layers, since compromise of devices or introduction of rogue devices can bypass defenses at higher layers.</p>
+          <p>Our expectation is that flows in IoT apps are (1) often going to be predictable and (2) expressive enough to capture important properties such that flow violations indicate real problems and not false alarms.</p>
+    
+          <p>This project is divided into three thrusts:</p>
+          <p>Thrust 1: Specification and extraction of flow policies for IoT apps;</p>
+          <p>Thrust 2: Distributed enforcemement of flow policies;</p>
+          <p>Thrust 3: Evaluation and testing.</p>
+        </div>
+        <div class="col s12 m6">
+            <div class="image-container" style="margin:35%">
+                <img src="/images/logo.jpg">
+            </div>
+          </div>
+      </div>
+    </div>
+
+    <a name="team"></a>
+    <h2 class='center-align row section'>Our Team</h2>
+    <div class='divider'></div>
+
+    <div id='team'>
+      <div id='team-doctors-section' class='container section'>
+       
+        <div class='row'>
+          <!--person-->
+          <div id='person'>
+            <div class='col s12 m2'>
+                <div class='image-container'>
+                  <img src="/images/suruagy.jpg" class='circle responsive'>
+                </div>
+              </div>
+              <div class='col s12 m4'>
+                <h5>José Augusto Suruagy</h5> <!--trocar por member.name-->
+                <p>P.I Professor</p> <!--trocar por member.title-->
+                <p>UFPE</p>
+              </div>
+          </div>
+          <!--person-->
+          <div id='person'>
+            <div class='col s12 m2'>
+                <div class='image-container'>
+                  <img src="/images/damorim.jpg" class='circle responsive'>
+                </div>
+              </div>
+              <div class='col s12 m4'>
+                <h5>Marcelo d'Amorim</h5> <!--trocar por member.name-->
+                <p>Professor</p> <!--trocar por member.title-->
+                <p>UFPE</p>
+              </div>
+          </div>
+        </div>
+
+        <div class='row'>
+          <!--person-->
+          <div id='person'>
+              <div class='col s12 m2'>
+                  <div class='image-container'>
+                    <img src="/images/kiev.jpg" class='circle responsive'>
+                  </div>
+                </div>
+                <div class='col s12 m4'>
+                  <h5>Kiev Gama</h5> <!--trocar por member.name-->
+                  <p>Professor</p> <!--trocar por member.title-->
+                  <p>UFPE</p>
+                </div>
+            </div>
+            <!--person-->
+            <div id='person'>
+              <div class='col s12 m2'>
+                  <div class='image-container'>
+                    <img src="/images/pasg.jpg" class='circle responsive'>
+                  </div>
+                </div>
+                <div class='col s12 m4'>
+                  <h5>Paulo A. S. Gonçalves</h5> <!--trocar por member.name-->
+                  <p>Professor</p> <!--trocar por member.title-->
+                  <p>UFPE</p>
+                </div>
+            </div>
+          </div>
+
+          <div class='row'>
+              <!--person-->
+              <div id='person'>
+                <div class='col s12 m2'>
+                    <div class='image-container'>
+                      <img src="/images/marinov.jpg" class='circle responsive'>
+                    </div>
+                  </div>
+                  <div class='col s12 m4'>
+                    <h5>Darko Marinov</h5> <!--trocar por member.name-->
+                    <p>Professor</p> <!--trocar por member.title-->
+                    <p>UIUC</p>
+                  </div>
+              </div>
+              <!--person-->
+              <div id='person'>
+                <div class='col s12 m2'>
+                    <div class='image-container'>
+                      <img src="/images/prakash.jpg" class='circle responsive'>
+                    </div>
+                  </div>
+                  <div class='col s12 m4'>
+                    <h5>Atul Prakash</h5> <!--trocar por member.name-->
+                    <p>Professor</p> <!--trocar por member.title-->
+                    <p>UMICH</p>
+                  </div>
+              </div>
+            </div>
+
+      </div>
+
+      <div id='team-masters-section' class='container section'>
+             
+        <div class='row'>
+          <!--person-->
+          <div id='person'>
+            <div class='col s12 m2'>
+                <div class='image-container'>
+                  <img src="/images/davinomjr.jpg" class='circle responsive'>
+                </div>
+              </div>
+              <div class='col s12 m4'>
+                <h5>Davino Junior</h5> <!--trocar por member.name-->
+                <p>MSc in Computer Science</p> <!--trocar por member.title-->
+                <p>UFPE</p>
+              </div>
+          </div>
+          <!--person-->
+          <div id='person'>
+            <div class='col s12 m2'>
+                <div class='image-container'>
+                  <img src="/images/luishmelo.jpg" class='circle responsive'>
+                </div>
+              </div>
+              <div class='col s12 m4'>
+                <h5>Luis Melo</h5> <!--trocar por member.name-->
+                <p>MSc in Computer Science</p> <!--trocar por member.title-->
+                <p>UFPE</p>
+              </div>
+          </div>
+        </div>
+
+        <div class='row'>
+            <!--person-->
+          <div id='person'>
+              <div class='col s12 m2'>
+                  <div class='image-container'>
+                    <img src="/images/cezl.jpg" class='circle responsive'>
+                  </div>
+                </div>
+                <div class='col s12 m4'>
+                  <h5>Carlos Zimmerle</h5> <!--trocar por member.name-->
+                  <p>MSc in Computer Science</p> <!--trocar por member.title-->
+                  <p>UFPE</p>
+                </div>
+              </div>
+            <!--person-->
+            <div id='person'>
+              <div class='col s12 m2'>
+                  <div class='image-container'>
+                    <img src="/images/rbsa2.jpg" class='circle responsive'>
+                  </div>
+                </div>
+                <div class='col s12 m4'>
+                  <h5>Richardson Bruno</h5> <!--trocar por member.name-->
+                  <p>MSc in Computer Science</p> <!--trocar por member.title-->
+                  <p>UFPE</p>
+                </div>
+            </div>
+          </div>
+
+          <div class='row'>
+              <!--person-->
+            <div id='person'>
+              <div class='col s12 m2'>
+                  <div class='image-container'>
+                    <img src="/images/rmsp.jpg" class='circle responsive'>
+                  </div>
+                </div>
+                <div class='col s12 m4'>
+                  <h5>Ramon Maciel</h5> <!--trocar por member.name-->
+                  <p>MSc in Computer Science</p> <!--trocar por member.title-->
+                  <p>UFPE</p>
+                </div>
+            </div>
+            <!--person-->
+            <div id='person'>
+              <div class='col s12 m2'>
+                  <div class='image-container'>
+                    <img src="/images/sjlf.jpg" class='circle responsive'>
+                  </div>
+                </div>
+                <div class='col s12 m4'>
+                  <h5>Samuel Jose Lima Ferreira</h5> <!--trocar por member.name-->
+                  <p>MSc in Computer Science</p> <!--trocar por member.title-->
+                  <p>UFPE</p>
+                </div>
+            </div>
+          </div>
+
+      </div>
+
+      <div id='team-bachelors-section' class='container section'>
+
+          <div class='row'>
+              <!--person-->
+              <div id='person'>
+                <div class='col s12 m2'>
+                    <div class='image-container'>
+                      <img src="/images/lapprand.jpg" class='circle responsive'>
+                    </div>
+                  </div>
+                  <div class='col s12 m4'>
+                    <h5>Arthur Barros Lapprand</h5> <!--trocar por member.name-->
+                    <p>UROP in Computer Science</p> <!--trocar por member.title-->
+                    <p>UFPE</p>
+                  </div>
+              </div>
+              <!--person-->
+              <div id='person'>
+                <div class='col s12 m2'>
+                    <div class='image-container'>
+                      <img src="/images/maia.jpg" class='circle responsive'>
+                    </div>
+                  </div>
+                  <div class='col s12 m4'>
+                    <h5>Eduardo Oliveira</h5> <!--trocar por member.name-->
+                    <p>UROP in Computer Science</p> <!--trocar por member.title-->
+                    <p>UFPE</p>
+                  </div>
+              </div>
+            </div>
+    
+            <div class='row'>
+                <!--person-->
+              <div id='person'>
+                  <div class='col s12 m2'>
+                      <div class='image-container'>
+                        <img src="/images/filipems.jpg" class='circle responsive'>
+                      </div>
+                    </div>
+                    <div class='col s12 m4'>
+                      <h5>Filipe de Melo Silva</h5> <!--trocar por member.name-->
+                      <p>UROP in Computer Engineering</p> <!--trocar por member.title-->
+                      <p>UFPE</p>
+                    </div>
+                </div>
+                <!--person-->
+                <div id='person'>
+                  <div class='col s12 m2'>
+                      <div class='image-container'>
+                        <img src="/images/guilhermessc.jpg" class='circle responsive'>
+                      </div>
+                    </div>
+                    <div class='col s12 m4'>
+                      <h5>Guilherme Sales Santa Cruz</h5> <!--trocar por member.name-->
+                      <p>UROP in Computer Engineering</p> <!--trocar por member.title-->
+                      <p>UFPE</p>
+                    </div>
+                </div>
+              </div>
+    
+              <div class='row'>
+                  <!--person-->
+                <div id='person'>
+                  <div class='col s12 m2'>
+                      <div class='image-container'>
+                        <img src="/images/irbp.jpg" class='circle responsive'>
+                      </div>
+                    </div>
+                    <div class='col s12 m4'>
+                      <h5>Italo Rodrigo Barbosa Paulino</h5> <!--trocar por member.name-->
+                      <p>UROP in Computer Engineering</p> <!--trocar por member.title-->
+                      <p>UFPE</p>
+                    </div>
+                </div>
+                <!--person-->
+                <div id='person'>
+                  <div class='col s12 m2'>
+                      <div class='image-container'>
+                        <img src="/images/walbermr.jpg" class='circle responsive'>
+                      </div>
+                    </div>
+                    <div class='col s12 m4'>
+                      <h5>Walber de Macedo Rodrigues</h5> <!--trocar por member.name-->
+                      <p>UROP in Computer Engineering</p> <!--trocar por member.title-->
+                      <p>UFPE</p>
+                    </div>
+                </div>
+              </div>
+      </div>
+    </div>
+  
+    <h2 class='center-align row section'><a name="partners"></a>Partners</h2>
+    <div class='divider'></div>
+
+    <div class="row">
+      <div class="container section">  
+        <div class="col m1"></div>
+        <div class="col s12 m2">
+          <div class="image-container">
+            <a href= "https://www.ufpe.br/"> <img class="responsive-img" src="/images/ufpe.png"></a>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="col m1"></div>
+        <div class="col s12 m5">
+            <div class="image-container">
+              <a href="http://illinois.edu/"><img class="responsive-img" src="/images/illinois.bmp"></a>
+            </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="col s12 m3">
+          <div class="image-container">
+            <a href="https://www.umich.edu/"><img class="responsive-img" src="/images/umich.png"> </div></a>
+        </div>
+      </div>
+      
+    </div>
+  
+  </body>
+</html>
